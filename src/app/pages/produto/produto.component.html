@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-end">
+  <button [routerLink]="'/produtoedit'">Adicionar</button>
+</div>
+<nz-table #basicTable [nzData]="listOfData">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{ data.id }}</td>
+      <td>{{ data.nome }}</td>
+      <td>
+        <a [routerLink]="['/produtoedit']" nz-button nzType="link">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

@@ -1,0 +1,20 @@
+<p>maquina works!</p>
+<nz-table #basicTable [nzData]="listOfData">
+    <thead>
+      <tr>
+        <th>Codigo</th>
+        <th>Nome</th>
+        <th>Setor</th>
+        <th>Ação</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.codigo }}</td>
+        <td>{{ data.nome }}</td>
+        <td>{{ data.setor }}</td>
+        <td>
+          <a [routerLink]="['/imovel', data.id]" nz-button nzType="link">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

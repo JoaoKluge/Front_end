@@ -1,0 +1,15 @@
+<h1>Funcionario Edit:</h1>
+<br/>
+<form class="formControl" [formGroup]="funcionarioForm">
+  <div>
+    <span class="formControl">Nome: <input class="formControl" formControlName="nome"></span>
+  </div>
+  <div>
+    <span class="formControl">Sobrenome: <input class="formControl" formControlName="sobrenome"></span>
+  </div>
+  <div>
+    <span class="formControl">Setor: <input class="formControl" formControlName="setor"></span>
+  </div>
+</form>
+<button (click)="saveForm()">Save</button>
+<button (click)="resetForm()">Reset</button>

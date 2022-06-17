@@ -1,0 +1,27 @@
+<p>ordemproducao works!</p>
+<nz-table #basicTable [nzData]="listOfData">
+    <thead>
+      <tr>
+        <th>OP</th>
+        <th>Cliente</th>
+        <th>Produto</th>
+        <th>Maquina</th>
+        <th>Funcionario</th>
+        <th>Quantidade</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.op }}</td>
+        <td>{{ data.cliente }}</td>
+        <td>{{ data.produto }}</td>
+        <td>{{ data.maquina }}</td>
+        <td>{{ data.funcionario }}</td>
+        <td>{{ data.quantidade }}</td>
+        <td>
+          <a [routerLink]="['/imovel', data.id]" nz-button nzType="link">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

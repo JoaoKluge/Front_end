@@ -1,0 +1,12 @@
+<h1>Maquina Edit:</h1>
+<br/>
+<form class="formControl" [formGroup]="maquinaForm">
+  <div>
+    <span class="formControl">Nome: <input class="formControl" formControlName="nome"></span>
+  </div>
+  <div>
+    <span class="formControl">Setor: <input class="formControl" formControlName="setor"></span>
+  </div>
+</form>
+<button (click)="saveForm()">Save</button>
+<button (click)="resetForm()">Reset</button>

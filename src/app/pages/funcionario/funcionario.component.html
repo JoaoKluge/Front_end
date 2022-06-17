@@ -1,0 +1,23 @@
+<p>funcionario works!</p>
+<nz-table #basicTable [nzData]="listOfData">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Setor</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.id }}</td>
+        <td>{{ data.nome }}</td>
+        <td>{{ data.sobrenome }}</td>
+        <td>{{ data.setor }}</td>
+        <td>
+          <a [routerLink]="['/imovel', data.id]" nz-button nzType="link">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

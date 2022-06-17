@@ -1,0 +1,9 @@
+<h1>Produto Edit:</h1>
+<br/>
+<form class="formControl" [formGroup]="produtoForm">
+  <div>
+    <span class="formControl">nome: <input class="formControl" formControlName="nome"></span>
+  </div>
+</form>
+<button (click)="saveForm()">Save</button>
+<button (click)="resetForm()">Reset</button>
